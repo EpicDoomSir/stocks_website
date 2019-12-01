@@ -1,5 +1,7 @@
-from stocks_website.app import app
+from flask import Blueprint
 
-@app.route('/')
+main_routes = Blueprint('main', __name__, 'tamplates/')
+
+@main_routes.route('/')
 def index():
-    pass
+    return 'Hi'
